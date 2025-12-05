@@ -9,6 +9,8 @@ import Header from './modules/header/Header';
 import AdminOrders from "./modules/userModules/admin/adminDashboard/AdminOrders";
 import AdminProducts from "./modules/userModules/admin/adminDashboard/AdminProduct";
 import AdminLayout from "./modules/userModules/admin/adminDashboard/AdminLayout";
+import AdminEditProduct from "./modules/userModules/admin/adminDashboard/AdminEditProduct";
+
 
 function App() {
   return (
@@ -24,8 +26,9 @@ function App() {
 
           <Route path="/admin" element={<AdminLayout />}>
             <Route path="products" element={<AdminProducts />} />
-            <Route path="products/add" element={<div>Add product</div>} />
-            <Route path="products/edit/:id" element={<div>Edit product</div>} />
+            <Route path="products/add" element={AdminOrders} />
+            <Route path="products/edit/:id" element={<AdminEditProduct />} />
+
           </Route>
 
         </Routes>
