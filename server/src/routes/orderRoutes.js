@@ -16,5 +16,8 @@ router.get('/my', auth, async (req, res) => {
     res.json(orders);
 });
 
+router.put('/:id', protect, adminOnly, updateOrderStatus);
+router.get('/admin', protect, adminOnly, getAllOrders);
+
 
 module.exports = router;
