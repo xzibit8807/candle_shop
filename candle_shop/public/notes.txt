@@ -1,0 +1,25 @@
+ToDo:
+
+- Put a hero background image at `public/bg-sweet-candles.jpg` 
+(I recommended Undraw or free Unsplash images).
+- Add `/placeholder.jpg` for missing product photos.
+
+
+---
+
+
+## How to run frontend locally (quick)
+1. `cd frontend`
+2. `npm install`
+3. Create `.env` from `.env.example` and set `VITE_API_URL` to your backend 
+(e.g. `http://localhost:8080/api`).
+4. `npm run dev` and open `http://localhost:5173`
+
+
+---
+
+
+If this looks good, ще генерирам следващо — **backend** дървото и файловете 
+(готови за `npm install` + .env). След това мога да: добавя Stripe пример,
+ направа на админ dashboard и да опакова целия проект в zip. 
+ Ако искаш да направя backend сега — казвай и започвам веднага.
