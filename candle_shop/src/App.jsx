@@ -5,8 +5,10 @@ import Gallery from './modules/gallery/Gallery';
 import ProductPage from './modules/productPage/ProductPage';
 import Login from './modules/userModules/login/Login';
 import Register from './modules/userModules/register/Register';
-import AdminAddProduct from './modules/addProducts/AdminAddProduct';
 import Header from './modules/header/Header';
+import AdminOrders from "./modules/userModules/admin/adminDashboard/AdminOrders";
+import AdminProducts from "./modules/userModules/admin/adminDashboard/AdminProduct";
+import AdminLayout from "./modules/userModules/admin/adminDashboard/AdminLayout";
 
 function App() {
   return (
@@ -19,7 +21,13 @@ function App() {
           <Route path="/product/:id" element={<ProductPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/admin/add" element={<AdminAddProduct />} />
+
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="products" element={<AdminProducts />} />
+            <Route path="products/add" element={<div>Add product</div>} />
+            <Route path="products/edit/:id" element={<div>Edit product</div>} />
+          </Route>
+
         </Routes>
       </main>
     </div>
