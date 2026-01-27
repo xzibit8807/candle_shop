@@ -1,0 +1,123 @@
+.login-page {
+    min-height: calc(100vh - 80px);
+    background: #fff7f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-card {
+    background: #fffaf8;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.login-logo {
+    width: 72px;
+    height: 72px;
+    background: #e29aa5;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon-logo {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.logo-wrapper {
+    cursor: pointer;
+}
+
+.login-logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-icon-logo {
+    transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover .login-logo {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo-wrapper:hover .logo-icon-logo {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+
+.login-card h1 {
+    font-size: 2rem;
+    color: #4a2e1f;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #8a6b5c;
+    margin-bottom: 30px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.login-form label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #5a3d2b;
+}
+
+.login-form input {
+    padding: 12px 14px;
+    border-radius: 12px;
+    border: 1px solid #e6d8d0;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: #e29aa5;
+}
+
+.login-btn {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #e29aa5, #d88c97);
+    border: none;
+    color: white;
+    padding: 14px;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(226, 154, 165, 0.45);
+}
+
+.register-text {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #8a6b5c;
+}
+
+.register-link {
+    color: #d88c97;
+    font-weight: bold;
+    text-decoration: none;
+}

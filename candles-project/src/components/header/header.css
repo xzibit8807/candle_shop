@@ -1,0 +1,230 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+
+    background: rgba(254, 246, 242, 0.75);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: backdrop-filter 0.3s ease, background 0.3s ease;
+}
+
+.header-left .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.logo-circle {
+    width: 56px;
+    height: 56px;
+    background: #e29aa5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon {
+    width: 56px;
+    height: 56px;
+    background: #e29aa5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+.logo-wrapper {
+    cursor: pointer;
+}
+
+.logo-circle {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-icon {
+    transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover .logo-circle {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.logo-wrapper:hover .logo-icon {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+.logo-text {
+    font-weight: bold;  
+    font-size: 1.4rem;
+    color: #5a3d2b;
+}
+
+
+.header-left .logo span {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #5a3d2b;
+}
+
+.header-center {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #5a3d2b;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-item:hover {
+    color: #d49a6a;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lang-switch button {
+    border: none;
+    background: transparent;
+    padding: 5px 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.lang-switch button.active {
+    background-color: #d49a6a;
+    color: white;
+}
+
+.lang-switch button:hover {
+    background-color: #f0c5a2;
+}
+
+.sign-in {
+    background-color: #d49a6a;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.sign-in:hover {
+    background-color: #b87f58;
+}
+
+/* Мобилна версия */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .header-center {
+        gap: 15px;
+    }
+}
+
+.btn-link {
+    background-color: #d49a6a;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-link:hover {
+    background-color: #b87f58;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    background: #5a3d2b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    min-width: 160px;
+    overflow: hidden;
+}
+
+.dropdown a,
+.dropdown button {
+    display: block;
+    padding: 10px 16px;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    color: #5a3d2b;
+    font-size: 0.95rem;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+    background: #fef1ea;
+}
+
+.logout {
+    background: transparent;
+    border: none;
+    color: #5a3d2b;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header.scrolled {
+    background: rgba(254, 246, 242, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}

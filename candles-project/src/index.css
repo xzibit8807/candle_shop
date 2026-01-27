@@ -1,0 +1,102 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 90vh;
+    background:
+        linear-gradient(to right,
+            rgba(255, 248, 243, 0.95) 0%,
+            rgba(255, 248, 243, 0.85) 40%,
+            rgba(255, 248, 243, 0.4) 65%,
+            rgba(255, 248, 243, 0.1) 100%),
+        url("./assets/hero-candles.jpg");
+    background-size: cover;
+    background-position: center right;
+
+    display: flex;
+    align-items: center;
+    padding: 4rem 6rem;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: #fde8ec;
+    color: #c26a7a;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    color: #3b2b23;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 span {
+    color: #d88997;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #6f5b52;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.primary-btn {
+    background: #d88997;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background: #c67886;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #d88997;
+    color: #d88997;
+    padding: 0.9rem 1.8rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 3rem 2rem;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions button {
+        width: 100%;
+    }
+}
